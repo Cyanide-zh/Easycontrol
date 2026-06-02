@@ -25,11 +25,13 @@ public class ActiveActivity extends Activity {
     ViewTools.setLocale(this);
     activityActiveBinding = ActivityActiveBinding.inflate(this.getLayoutInflater());
     setContentView(activityActiveBinding.getRoot());
-    // 取消激活
-    if (AppData.setting.getIsActive()) deactivate();
-    setButtonListener();
-    // 绘制UI
-    drawUi();
+    AppData.setting.setIsActive(true); //按G指导的建议取消激活要求
+    finish();
+    //// 取消激活
+    //if (AppData.setting.getIsActive()) deactivate();
+    //setButtonListener();
+    //// 绘制UI
+    //drawUi();
   }
 
   private void drawUi() {
