@@ -33,13 +33,14 @@ jobs:
         KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
       run: |
         chmod +x gradlew
-        echo "显示本项目所有指令"
-        ./gradlew tasks --all
+        #echo "显示本项目所有指令"
+        #./gradlew tasks --all
         echo "显示本项目编译指令"
         ./gradlew tasks --group="build"
         echo "开始编译"
-        ./gradlew :server:copyRelease --stacktrace
-        ./gradlew :app:assembleRelease --stacktrace
+        #./gradlew :server:copyRelease --stacktrace
+        #./gradlew :app:assembleRelease --stacktrace
+        ./gradlew clean assembleRelease --no-daemon
         
     - name: Upload APK
       uses: actions/upload-artifact@v4
