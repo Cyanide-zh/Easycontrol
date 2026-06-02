@@ -47,12 +47,12 @@ public class ActiveActivity extends Activity {
         //boolean isOk = ActiveHelper.active(activeKey);
         loading.second.cancel();
         AppData.uiHandler.post(() -> {
-          if (isOk) {
-            finish();
-            AppData.setting.setIsActive(true);
-            PublicTools.startUrl(this, "https://gitee.com/mingzhixianweb/easycontrol/blob/master/HOW_TO_USE.md");
-            PublicTools.logToast("active", getString(R.string.toast_success), true);
-          } else PublicTools.logToast("active", getString(R.string.toast_fail), true);
+         // if (isOk) {
+           // finish();
+           // AppData.setting.setIsActive(true);
+           // PublicTools.startUrl(this, "https://gitee.com/mingzhixianweb/easycontrol/blob/master/HOW_TO_USE.md");
+           // PublicTools.logToast("active", getString(R.string.toast_success), true);
+          //} else PublicTools.logToast("active", getString(R.string.toast_fail), true);
         });
       }).start();
     });
@@ -66,10 +66,10 @@ public class ActiveActivity extends Activity {
       //boolean isOk = ActiveHelper.deactivate(AppData.setting.getActiveKey());
       loading.second.cancel();
       AppData.uiHandler.post(() -> {
-        if (isOk) {
-          AppData.setting.setIsActive(false);
-          PublicTools.logToast("deactivate", getString(R.string.toast_success), true);
-        } else PublicTools.logToast("deactivate", getString(R.string.toast_fail), true);
+        //if (isOk) {
+         // AppData.setting.setIsActive(false);
+         // PublicTools.logToast("deactivate", getString(R.string.toast_success), true);
+       // } else PublicTools.logToast("deactivate", getString(R.string.toast_fail), true);
       });
     }).start();
   }
