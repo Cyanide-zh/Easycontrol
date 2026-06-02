@@ -107,9 +107,9 @@ public class FullActivity extends Activity implements SensorEventListener {
 
   // 设置按钮监听
   private void setButtonListener() {
-    activityFullBinding.buttonBack.setOnClickListener(v -> clientController.handleAction("buttonBack", null, 0));
+    activityFullBinding.buttonBack.setOnClickListener(v -> clientController.handleAction("buttonSwitch", null, 0));
     activityFullBinding.buttonHome.setOnClickListener(v -> clientController.handleAction("buttonHome", null, 0));
-    activityFullBinding.buttonSwitch.setOnClickListener(v -> clientController.handleAction("buttonSwitch", null, 0));
+    activityFullBinding.buttonSwitch.setOnClickListener(v -> clientController.handleAction("buttonBack", null, 0));
     activityFullBinding.buttonApp.setOnClickListener(v -> {
       clientController.handleAction("changeToApp", null, 0);
       changeBarView();
