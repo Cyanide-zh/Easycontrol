@@ -20,6 +20,7 @@
 - 支持分辨率自适应
 - 良好的旋转支持
 - 支持小窗显示与全屏显示
+- **修改了返回键和最近任务键的位置,返回键在左边,最近任务键在右边。更符合原生安卓的规范
 
 ## 使用说明
 - [点击此处查看](https://gitee.com/mingzhixianweb/easycontrol/blob/master/HOW_TO_USE.md)
@@ -33,7 +34,7 @@
 ## 截图
 <center class="half">
  <img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/1.jpg" width="150"/><img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/2.jpg" width="150"/><img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/3.jpg" width="150"/>
- <img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/4.jpg" width="150"/><img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/5.jpg" width="150"/><img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/6.jpg" width="150"/>
+ <img src="https://raw.githubusercontent.com/Cyanide-zh/Easycontrol/refs/heads/master/Screenshot_20260602_224224.jpg" width="558"/><img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/5.jpg" width="150"/><img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/6.jpg" width="150"/>
  <img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/7.jpg" width="150"/><img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/screenshot/8.jpg" width="150"/>
 </center>
 
@@ -41,9 +42,10 @@
 如果您想要自己构建，请注意以下几项
 - 请遵循本项目的开源协议
 - 我去除了官方打包加入的激活模块相关的代码文件，所以会有报错，请自行注释掉报错代码即可
-
+- **我已经修改完成源代码,可以分支本项目仓库,直接配置签名密钥以后在Github Actions编译;如果不配置签名密钥,也可以直接编译,但是需要使用MT管理器等方法签名编译出来的 apk 文件才能安装。
 ## 反馈
-请在Github或Gitee提出Issue，或进入易控反馈群反馈BUG或建议。
+请在Github或Gitee提出Issue，或进入易控反馈**QQ群反馈BUG或建议。(本分支作者：都上这了还使用这屑中之屑的绿色聊天软件属实是拉完了)
+
 
 <img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/other/qq_issue.webp" width="200px">
 <img src="https://gitee.com/mingzhixianweb/easycontrol/raw/master/pic/other/wechat_issue.png" width="200px">
