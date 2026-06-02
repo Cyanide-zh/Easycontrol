@@ -22,7 +22,7 @@ jobs:
     #  将 Base64 恢复为 Keystore 文件
     - name: Decode Keystore
       working-directory: ./easycontrol/app
-      run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > keystore.jks
+      run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > keystore.jks ; sleep 1
 
     - name: Build the app
       working-directory: ./easycontrol
@@ -45,6 +45,6 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: Easycontrol_For_Car_Release
+        name: Easycontrol_Release
         # 指向 release 目录
         path: ./easycontrol/app/build/outputs/apk/release/*.apk
