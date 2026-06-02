@@ -38,9 +38,9 @@ jobs:
         echo "显示本项目编译指令"
         ./gradlew tasks --group="build"
         echo "开始编译"
-        #./gradlew :server:copyRelease --stacktrace
-        #./gradlew :app:assembleRelease --stacktrace
-        ./gradlew clean assembleRelease --no-daemon
+        ./gradlew :server:copyRelease --stacktrace
+        ./gradlew :app:assembleRelease --stacktrace
+        #./gradlew clean assembleRelease --no-daemon
         
     - name: Upload APK
       uses: actions/upload-artifact@v4
