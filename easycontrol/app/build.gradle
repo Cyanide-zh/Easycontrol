@@ -20,7 +20,14 @@ android {
   viewBinding {
     enabled = true
   }
-
+	signingConfigs {
+		release {
+			storeFile rootProject.file("keystore.jks")
+			storePassword System.getenv("KEYSTORE_PASSWORD")
+			keyAlias System.getenv("KEY_ALIAS")
+			keyPassword System.getenv("KEY_PASSWORD")
+		}
+	}
   buildTypes {
     debug {
       buildConfigField "boolean", "ENABLE_DEBUG_FEATURE", "true"
@@ -31,6 +38,7 @@ android {
       buildConfigField "boolean", "ENABLE_DEBUG_FEATURE", "false"
       manifestPlaceholders = [app_name: "@string/app_name", app_icon: "@mipmap/ic_launcher", app_icon_round: "@mipmap/ic_launcher_round"]
       debuggable false
+      signingConfig signingConfigs.release //必须有这行
       minifyEnabled true
       shrinkResources true
       proguardFiles 'proguard-rules.pro'
